@@ -11,7 +11,7 @@ function StudentForm() {
         e.preventDefault();
         console.log("AssignesMentor",assignmentor)
         console.log(name,batch,assignmentor)
-        const posted_stud = await axios.post(`https://mentor-student-backend.herokuapp.com/Students`,{name,batch,mentor: assignmentor})
+        const posted_stud = await axios.post(`https://zen-assign-mentors.herokuapp.com/Students`,{name,batch,mentor: assignmentor})
         console.log(posted_stud.data);
         setStudents([...students,posted_stud.data])
         setname('');setBatch('');setassignMentor('');
@@ -44,4 +44,4 @@ function StudentForm() {
     )
 }
 
-export default StudentForm;
+export default StudentForm

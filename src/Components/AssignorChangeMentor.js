@@ -9,9 +9,9 @@ function AssignorChangeMentor() {
     const [mentor,setMentor] = useState('');
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const updated_mentor = await axios.patch(`https://mentor-student-backend.herokuapp.com/Students/assign-mentor/${student}`,{mentor})
+        const updated_mentor = await axios.patch(`https://zen-assign-mentors.herokuapp.com/Students/assign-mentor/${student}`,{mentor})
         console.log(updated_mentor);
-        const stud_data = await axios.get(`https://mentor-student-backend.herokuapp.com/Students`)
+        const stud_data = await axios.get(`https://zen-assign-mentors.herokuapp.com/Students`)
         setStudents(stud_data.data);
         setStudent('');setMentor('');
     }
@@ -48,4 +48,4 @@ function AssignorChangeMentor() {
     )
 }
 
-export default AssignorChangeMentor;
+export default AssignorChangeMentor

@@ -33,4 +33,4 @@ function MentorTable() {
     )
 }
 
-export default MentorTable;
+export default MentorTable

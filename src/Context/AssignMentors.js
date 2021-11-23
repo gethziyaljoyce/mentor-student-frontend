@@ -8,14 +8,15 @@ export const AssignMentorsContext = React.createContext();
 export const AssignMentorProvider = ({ children }) => {
   const [students, setStudents] = useState([]);
   const [mentors, setMentors] = useState([]);
+  const BaseURL = `https://zen-assign-mentors.herokuapp.com`;
   const fetchData = async () => {
     await axios
-      .get(`https://mentor-student-backend.herokuapp.com/Mentors`)
+      .get(`https://zen-assign-mentors.herokuapp.com/Mentors`)
       .then((response) => setMentors(response.data))
       .then(() => console.log(mentors));
 
     await axios
-      .get(`https://mentor-student-backend.herokuapp.com/Students`)
+      .get(`https://zen-assign-mentors.herokuapp.com/Students`)
       .then((response) => setStudents(response.data))
       .then(() => console.log(students));
   };

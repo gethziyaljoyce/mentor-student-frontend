@@ -44,11 +44,11 @@ function AssignStudentsToMentor() {
     /* console.log("value sent to api")
         console.log(stud_list,mentor); */
     await axios.patch(
-      `https://mentor-student-backend.herokuapp.com/Students/assign-mentor-students`,
+      `https://zen-assign-mentors.herokuapp.com/Students/assign-mentor-students`,
       { mentor, stud_list }
     );
     const stud_data = await axios.get(
-      `https://mentor-student-backend.herokuapp.com/Students`
+      `https://zen-assign-mentors.herokuapp.com/Students`
     );
     /* console.log(stud_data.data) */
     setStudents(stud_data.data);

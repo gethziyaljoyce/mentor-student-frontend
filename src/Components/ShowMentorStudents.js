@@ -12,7 +12,7 @@ function ShowMentorStudents() {
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const student_list = await axios.get(`https://mentor-student-backend.herokuapp.com/Students/mentor-students/${mentor}`);
+        const student_list = await axios.get(`https://zen-assign-mentors.herokuapp.com/Students/mentor-students/${mentor}`);
         console.log(student_list);
         setStudList(student_list.data);
         setMentor('')
@@ -66,4 +66,4 @@ function ShowMentorStudents() {
     )
 }
 
-export default ShowMentorStudents;
+export default ShowMentorStudents
