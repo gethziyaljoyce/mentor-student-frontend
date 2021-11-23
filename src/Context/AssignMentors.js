@@ -10,7 +10,7 @@ export const AssignMentorProvider = ({ children }) => {
   const [mentors, setMentors] = useState([]);
   const fetchData = async () => {
     await axios
-      .get(`https://mentor-student-backend.herokuapp.com/`)
+      .get(`https://mentor-student-backend.herokuapp.com/Mentors`)
       .then((response) => setMentors(response.data))
       .then(() => console.log(mentors));
 
